@@ -485,4 +485,7 @@ print('Logistic regressions score %f' % logReg.score(X_test, Y_test))
 # now use one of the earlier function to see how the actual prediction and displayed digits look
 pred_y = logReg.predict(X_test)
 disp_dataset_samples(test_dataset, pred_y)
-
+#%%
+from sklearn import neighbors
+knn = neighbors.KNeighborsClassifier()
+print('KNN score: %f' % knn.fit(X_train, Y_train).score(X_test, Y_test))
